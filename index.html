@@ -52,8 +52,8 @@
                         </a>
                     </li>
                 </ul>
-                <span class="navbar-text">
-                    <a href="" data-toggle="modal" data-target="#loginModal">
+                <span class="navbar-text" id="loginBtn">
+                    <a>
                         <i class="fa fa-sign-in"></i> Login
                     </a>
                 </span>
@@ -65,10 +65,10 @@
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">
+                    <h4 class="modal-title fl-wt">
                         Login
                     </h4>
-                    <button class="close" class="close" data-dismiss="modal">&times;</button>
+                    <button class="close fl-wt" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -107,8 +107,8 @@
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title">Reserve Table</h3>
-                    <button class="close" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title fl-wt">Reserve Table</h3>
+                    <button class="close fl-wt" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -211,9 +211,17 @@
                             Reserve Table
                         </a>
                     </div> -->
-                    <div class="col-12 col-sm-6 align-self-center btn btn-block btn-warning ">
+                    
+                    <!-- REMOVED DATA ATTRIBUTES AND ADDED JAVASCRIPT CODE -->
+                    <!-- <div class="col-12 col-sm-6 align-self-center btn btn-block btn-warning ">
                         <a role="button" href="#form" style="text-decoration: none ; color: black;" data-toggle="modal"
                             data-target="#reserveModal">
+                            Reserve Table
+                        </a>
+                    </div> -->
+                    <!-- REMOVED DATA ATTRIBUTES AND ADDED JAVASCRIPT CODE -->
+                    <div id="reserveBtn" class="col-12 col-sm-6 align-self-center btn btn-block btn-warning ">
+                        <a role="button" style="text-decoration: none ; color: black;">
                             Reserve Table
                         </a>
                     </div>
@@ -503,6 +511,12 @@
                     $('#carouselButton').children('span').removeClass('fa-play');
                     $('#carouselButton').children('span').addClass('fa-pause');
                 }
+            });
+            $('#reserveBtn').click(function (){
+                $('#reserveModal').modal('toggle');
+            });
+            $('#loginBtn').click(function () {
+                $('#loginModal').modal('toggle');
             });
         })
     </script>
